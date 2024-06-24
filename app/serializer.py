@@ -9,8 +9,7 @@ from app.book import Book
 class Serializer(ABC):
     @abstractmethod
     def serialize(self, book: Book) -> None:
-        raise ValueError(f"Unknown serialize type: {"serialize_type"}")
-
+        pass
 
 class JsonSerializer(Serializer):
     def serialize(self, book: Book) -> str:
